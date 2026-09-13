@@ -1,0 +1,7 @@
+{
+  "name": "mga-sining-sa-museo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
