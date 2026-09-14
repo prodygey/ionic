@@ -1,30 +1,36 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <ion-header>
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Photo GAllery</ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+    <ion-content class="ion-padding">
+      <CameraComponent @photo-Captured="addPhoto" />
+      <PhotoGalCom :photos="photos" />
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-</script>
+import { ref } from 'vue';
+import CameraComponent from '@/components/cameraComponent.vue';
+import PhotoGalCom from '@/components/PhotoGalCom.vue';
+import { 
+  IonContent, 
+  IonHeader, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar 
+  } from '@ionic/vue';
 
+  const photos = ref<string[]>([]);
+  const addPhoto = (photo: string) => {
+    photos.value.unshift(photo);
+  };
+</script>
+<!--
 <style scoped>
 #container {
   text-align: center;
@@ -54,3 +60,4 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue
   text-decoration: none;
 }
 </style>
+-->

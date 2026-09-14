@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">mga-sining-sa-museo</string>
+    <string name="title_activity_main">mga-sining-sa-museo</string>
+    <string name="package_name">com.codna.mgasiningsamuseo</string>
+    <string name="custom_url_scheme">com.codna.mgasiningsamuseo</string>
+</resources>
