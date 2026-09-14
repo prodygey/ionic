@@ -17,7 +17,7 @@
                 size="6"
                 size-md="4">
                 <ion-card>
-                    <ion-img :src="photos" class="gallery-image" />
+                    <ion-img :src="photo" class="gallery-image" />
                 </ion-card>
                 </ion-col>
             </ion-row>
@@ -36,6 +36,7 @@ import {
     IonGrid,
     IonRow,
     IonCol,
+    IonImg,
 } from '@ionic/vue';
 
 

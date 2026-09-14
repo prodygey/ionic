@@ -7,7 +7,7 @@
     </ion-header>
 
     <ion-content class="ion-padding">
-      <CameraComponent @photo-Captured="addPhoto" />
+      <CameraComponent @photoCaptured="addPhoto" />
       <PhotoGalCom :photos="photos" />
     </ion-content>
   </ion-page>
